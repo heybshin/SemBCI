@@ -1,5 +1,5 @@
 # SemAlign-BMI: Class-Semantics Aligned Learning for BMIs
-Brain-Machine Interfaces (BMIs) are paving the way for revolutionized human-machine interactions. Our approach, encapsulated in this repository, presents a novel method to improve robustness and adaptability of BMIs, particularly focusing on modeling semantic relationships among the classes.
+Brain-Machine Interfaces (BMIs) are paving the way for revolutionized human-machine interactions. Our semantics-aligned learning framework for EEG representation learning presents a novel method to improve scalability and adaptability of BMIs, particularly focusing on modeling the semantic relationships among the classes.
 
 ## Introduction
 Most BMIs today rely on a limited set of commands, which poses scalability issues and potential system failures with slight alterations in the command set. Our class-semantics aligned learning framework:
@@ -10,12 +10,18 @@ Most BMIs today rely on a limited set of commands, which poses scalability issue
 Through rigorous tests, our hierarchy-based methods have shown superior performance against traditional hierarchy-agnostic methods, both in terms of accuracy and semantic error hierarchy.
 
 ## Requirements
-Python 3.x
-CUDA (for GPU acceleration)
-PyTorch Lightning
-Scikit-learn
-(Any other libraries that need to be installed)
-Run pip install -r requirements.txt to install the required packages.
+Python >= 3.x
+CUDA >= 10.x (If using GPU)
+Other dependencies
+- `cuda`
+- `pytorch_lightning`
+- `mne`
+- `networkx`
+- `nltk`
+
+```bash
+pip install -r requirements.txt
+```
 
 ## Usage
 
