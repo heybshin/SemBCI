@@ -1,0 +1,19 @@
+LOSS:
+  name: 'arpl'
+  reg: 1.0
+  arpl_alpha: 10.0  # weight for center loss
+
+TRAIN:
+  n_epochs: 200
+  kfold: 5
+  batch_size: 30
+  optim: 'cyclic'
+  lr: 0.00009
+  step_size: 150
+  mode: 'exp_range'
+  gamma: 0.995
+
+MODEL:
+  dropout: 0. #  0.2, 0.4
+  latent_dim: 64
+

@@ -1,0 +1,54 @@
+DATA:
+  name: 'neuroskin'
+  type: 'MNE'
+  path: '/home/kingbuzzy/datasets/Neuroskin/Epoched/MNE/64ch(0.0-3.0)s_bp(0.1,83.33333333333333)_carTrue_icaFalse/'  #'E:/Datasets/Neuroskin/Epoched/MNE/64ch(0.0-3.0)s_bp(0.1,83.33333333333333)_carTrue_icaFalse/'   #
+  dist_path: 'hierarchy/distances/touchgesture_distances_simple.pkl'
+
+  # Dataset parameters
+  n_subs: 12
+  n_chans: 64
+  n_times: 1001
+  n_trials: 500
+  n_classes: 10
+  n_labels: 3
+  sfreq: 250. # sampling frequency in Hz
+
+  # List of names
+  ch_names: [ ] # list of channel names
+  class_names: [ ] # list of class names
+  class_abbr: [ ] # abbreviated class names
+  class_long: [ ] # full-length class names
+
+  # Select subset of channels / labels / classes for different experiments
+  select_channels: False #22 # [18, 22] #[28, 56]  #22 for SCN, 16, 28, 56    22 = 18S
+  select_labels: [] #['touch', 'pose', 'motion']
+  select_classes: False # ['Right', 'Left'] # ['Palm/Slide', 'Arm/Slide'] # ['Palm/Slide/Right', 'Palm/Slide/Left', 'Arm/Slide', 'Pinch']] #['Palm/Slide']
+  merge_classes: False # {'One': ['Slide'], 'Two': ['Pinch', 'Spread']} # {'Slide': ['Slide/Right'], 'Pinch': ['Pinch'], 'Spread': ['Spread'], 'Tap': ['Press']} ['Slide/Right', 'Pinch', 'Spread', 'Press'] # False # ['Palm', 'Arm'] [Slide, Pinch/Spread]
+  unknown_classes: ['Hand/Tap'] # ["Hand/Tap", "Arm/Spread", "Hand/Slide/U", "Hand/Slide/D"]  #
+
+  # Epoching parameters
+  tlen: 3. # length of epoch in seconds
+  tmin: 0. # start of epoch in seconds
+  tmax: 3. # end of epoch in seconds
+
+  # Filtering
+  l_freq: 0.1 # low cut-off frequency in Hz
+  h_freq: 83.3 # high cut-off frequency in Hz
+  ftype: 'firwin'  # 'butter'
+
+  # Other preprocessing
+  scaling: True # If True, unit conversion will be performed on entire data (to microvolts)
+  alignment: False # If True, Euclidean alignment will be performed on trial data
+  normalization: 'none' # 'none', 'zscore', 'ewma', 'fixedscale'
+  CSP: False # Common Spatial Pattern
+  mCSP: 20 # number of CSP components
+  regCSP: 0.5 # regularization parameter for CSP
+
+  # Augmentation
+  data_aug: 'none' #, 'time_mask']  #  ['time_mask', 'ch_perm', 'ch_lat']
+  aug_prob: 0.5 # probability of applying augmentation
+
+
+
+
+

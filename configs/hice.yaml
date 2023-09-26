@@ -1,0 +1,23 @@
+LOSS:
+  name: 'hice'
+  reg: 1.0
+  tree_path: 'hierarchy/trees/touchgesture_tree_TPLM.pkl'
+  hxe_alpha: 0.6 # 0.2
+
+TRAIN:
+  n_epochs: 200
+  batch_size: 30
+  optim: 'cyclic'
+  lr: 0.00009
+  step_size: 150
+  mode: 'exp_range'
+  gamma: 0.995
+
+#  optim: 'cosine'
+#  lr: 0.0001
+#  momentum: 0.9
+#  weight_decay: 0.0001
+
+MODEL:
+  dropout: 0.
+  latent_dim: 64

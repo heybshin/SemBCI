@@ -1,0 +1,9 @@
+# Experiment parameters
+DATA: 'neuroskin'
+TASK: 'csr'  # 'osr'
+LOSS: 'dag'  # 'ce' 'hice' 'hicon' 'dag' 'arpl'
+DISENT: False
+SAMPLER: 'hierarchical' # 'custom' 'random'
+SEED: 2023
+BATCH_SIZE: 30
+NUM_WORKERS: 1

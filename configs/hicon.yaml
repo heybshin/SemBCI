@@ -1,0 +1,18 @@
+LOSS:
+  name: 'hicon'
+  reg: 0.1
+  hyp: True  # hyperbolic embedding
+  hier_alpha: 0.5
+  hier_temp: 1.0
+  penalty: '-al' #  'div'  'max'
+
+TRAIN:
+  n_epochs: 200
+  optim: 'adaptive'
+  lr: 0.001
+  weight_decay: 0.0001
+
+MODEL:
+  dropout: 0.
+  latent_dim: 128
+

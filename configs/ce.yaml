@@ -1,0 +1,16 @@
+LOSS:
+  name: 'ce'
+  reg: 1.0
+  smoothing: 0.2
+
+TRAIN:
+  n_epochs: 200
+  batch_size: 30
+  optim: 'adaptive'
+  lr: 0.001
+  weight_decay: 0.0001
+
+MODEL:
+  dropout: 0.
+  latent_dim: 64
+

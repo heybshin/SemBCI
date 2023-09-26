@@ -1,0 +1,18 @@
+LOSS:
+  name: 'dag'
+  reg: 1.0
+  htype: 'simple' # simple, basic, coarse, fine
+
+TRAIN:
+  n_epochs: 200
+  kfold: 5
+  batch_size: 30
+  optim: 'cyclic'
+  lr: 0.0001
+  step_size: 100
+  mode: 'exp_range'
+  gamma: 0.9
+
+MODEL:
+  dropout: 0.
+  latent_dim: 64
