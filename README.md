@@ -23,7 +23,7 @@ To run the experiments, navigate to the root directory and execute:
 
 ```bash
 python main.py --gpus 0 --kfold 5 -ds Neuroskin -dt MNE HIER
-
+```
 
 ## Main Components
 Configurations (configs): Houses the YAML configuration files for different experiments and settings.
