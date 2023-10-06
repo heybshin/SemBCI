@@ -36,7 +36,7 @@ def main(args):
     if not os.path.isdir(save_path):
         os.makedirs(save_path)
 
-    # For each cv fold, yield train/test/val sets according to split func and perform training
+    # Subject-wise k-fold cross-validation
     for subject in range(cfg.DATA.n_subs):
 
         # Set dataset
@@ -46,7 +46,7 @@ def main(args):
         criterion = create_criterion(cfg)
 
         # Set k-fold
-        kfold = StratifiedKFold(n_splits=cfg.TRAIN.kfold, shuffle=True)
+        kfold = StratifiedKFold(n_splits=cfg.NUM_FOLDS, shuffle=True)
 
         for fold, (train_ids, val_ids) in enumerate(kfold.split(ds.data, ds.labels[:, -1])):
             print(f'SUBJECT {subject}, FOLD {fold + 1}')
@@ -59,7 +59,7 @@ def main(args):
             # Set model
             model = create_model(cfg, criterion)
 
-            # Set logger and callbacks
+            # Set logger and callbacks (use any logger you want)
             logger = CSVLogger("logs", name=cfg.log_name)
 
             # Pretrain if pretext task is given

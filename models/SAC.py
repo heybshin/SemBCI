@@ -7,7 +7,7 @@ from torch.optim.lr_scheduler import StepLR, CyclicLR, CosineAnnealingLR
 
 from torchmetrics import ConfusionMatrix, Accuracy, AUROC
 from pytorch_lightning import LightningModule
-import hyptorch.nn as hypnn
+from hyptorch import ToPoincare
 
 from losses import DisentLoss
 from .modules import Encoder, MIEstimator, Classifier
@@ -46,7 +46,7 @@ class SAClassifier(LightningModule):
             self.graph = criterion.graph
 
         if self.loss_name == 'hicon':
-            self.hyp = hypnn.ToPoincare(c=0.1, ball_dim=ldim, riemannian=True) if cfg.LOSS.hyp else None
+            self.hyp = ToPoincare(c=0.1, ball_dim=ldim, riemannian=True) if cfg.LOSS.hyp else None
 
         # Metrics
         self.acc = Accuracy(nclasses)

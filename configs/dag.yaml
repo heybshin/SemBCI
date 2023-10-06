@@ -5,7 +5,6 @@ LOSS:
 
 TRAIN:
   n_epochs: 200
-  kfold: 5
   batch_size: 30
   optim: 'cyclic'
   lr: 0.0001

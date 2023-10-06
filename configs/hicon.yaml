@@ -8,6 +8,7 @@ LOSS:
 
 TRAIN:
   n_epochs: 200
+  batch_size: 30
   optim: 'adaptive'
   lr: 0.001
   weight_decay: 0.0001

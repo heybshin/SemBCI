@@ -10,7 +10,7 @@ def create_cfg(args):
     cfg.update(model_cfg)
 
     if args.kfold:
-        cfg.TRAIN.kfold = args.kfold
+        cfg.NUM_FOLDS = args.kfold
     if args.epochs:
         cfg.TRAIN.n_epochs = args.epochs
     if args.seed:

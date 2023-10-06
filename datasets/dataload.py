@@ -7,7 +7,7 @@ import numpy as np
 import torch
 from torch.utils.data import Sampler, Dataset, DataLoader
 from pytorch_lightning import LightningDataModule
-from .transforms import data_transform
+from transforms import data_transform
 
 from typing import Optional, OrderedDict
 
@@ -52,15 +52,6 @@ def balanced_split(data, labels, frac=0.25, shuffle=True):
     return train_idx, test_idx
 
 
-def print_tree(tree, level=0):
-    if isinstance(tree, dict):
-        for key in OrderedDict(tree).keys():
-            print('\t' * level, key)
-            print_tree(tree[key], level + 1)
-    else:
-        print('\t' * level, "[Data Length: {}]".format(len(tree)))
-
-
 class DataContainer:
     """
     A container class for holding EEG dataset information.
@@ -95,7 +86,7 @@ class EEGDataModule(LightningDataModule):
     def __init__(self, cfg, dc: DataContainer):
         super().__init__()
         self.cfg = cfg
-        self.batch_size = cfg.BATCH_SIZE
+        self.batch_size = cfg.TRAIN.batch_size
         self.n_workers = cfg.NUM_WORKERS
 
         self.data = dc.data
