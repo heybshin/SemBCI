@@ -1,7 +1,7 @@
 DATA:
   name: 'neuroskin'
   type: 'MNE'
-  path: '/home/kingbuzzy/datasets/Neuroskin/Epoched/MNE/64ch(0.0-3.0)s_bp(0.1,83.33333333333333)_carTrue_icaFalse/'  #'E:/Datasets/Neuroskin/Epoched/MNE/64ch(0.0-3.0)s_bp(0.1,83.33333333333333)_carTrue_icaFalse/'   #
+  path: 'E:/Datasets/Neuroskin/Epoched/MNE/64ch(0.0-3.0)s_bp(0.1,83.33333333333333)_carTrue_icaFalse/'   #
   dist_path: 'hierarchy/distances/touchgesture_distances_simple.pkl'
 
   # Dataset parameters

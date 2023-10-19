@@ -94,7 +94,7 @@ def main(args):
         # END of subject loop
 
 
-# --gpu 0  --debug --kfold 5 -ds Neuroskin -dt MNE HIER
+# --gpus 0  --kfold 5
 
 if __name__ == "__main__":
 

@@ -1,1 +1,1 @@
-from nn import *
+from .nn import *

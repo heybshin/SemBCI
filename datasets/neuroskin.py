@@ -3,8 +3,7 @@ Load and preprocess NeuroSkin dataset
 """
 
 from .dataload import *
-from braindecode.preprocessing.preprocess import Preprocessor, exponential_moving_standardize
-from sklearn.preprocessing import scale as standard_scale
+from .preprocess import *
 
 import warnings
 warnings.filterwarnings('ignore')

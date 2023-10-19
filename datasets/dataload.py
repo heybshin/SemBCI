@@ -7,7 +7,7 @@ import numpy as np
 import torch
 from torch.utils.data import Sampler, Dataset, DataLoader
 from pytorch_lightning import LightningDataModule
-from transforms import data_transform
+from .transforms import data_transform
 
 from typing import Optional, OrderedDict
 
